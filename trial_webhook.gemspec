@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["DavidKar1uk1"]
   spec.email         = ["David.mwangi@kopokop.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{A Gem that consumes a webhook and displays the JSON content.}
+  spec.description   = %q{It is supposed to listen to a port, after a merchant transacts a buy goods, reversals, completes a settlement and creates a customer, the transaction should be displayed and sent to them.}
+  spec.homepage      = "https://github.com/DavidKar1uk1/k2_trial_connect.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-    spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+    spec.metadata["source_code_uri"] = "https://github.com/DavidKar1uk1/k2_trial_connect.git"
+    spec.metadata["changelog_uri"] = "https://github.com/DavidKar1uk1/k2_trial_connect.git"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."
@@ -39,4 +39,18 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "activesupport", "~> 4.2.0"
+  spec.add_development_dependency "cucumber"
+  spec.add_development_dependency "aruba"
+  spec.add_development_dependency "thor"
+
+  # Normal Testing
+  # spec.add_development_dependency "minitest"
+  # spec.add_development_dependency "vcr"
+  # spec.add_development_dependency "webmock"
+  #
+  # Hard dependencies
+  spec.add_development_dependency "faraday"
+
+
 end
